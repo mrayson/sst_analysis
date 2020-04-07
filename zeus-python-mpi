@@ -1,0 +1,26 @@
+#!/bin/bash --login
+#
+#SBATCH --account=pawsey0106
+#SBATCH --time=12:00:00
+##SBATCH --time=01:00:00
+#SBATCH --export=PYTHONPATH="/home/mrayson/code:$PYTHONPATH"
+#SBATCH --partition=workq
+##SBATCH --partition=debugq
+#SBATCH --output=LOGS/pythonmpi-%j.out
+#SBATCH --nodes=1
+#SBATCH --ntasks=24
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=124000
+
+module use ~/code/modulefiles
+module load anaconda-python/3.6.0
+
+export PYTHONUNBUFFERED=1
+
+#PYTHON=/home/mrayson/anaconda2/envs/soda/bin/python
+PYTHON=python
+export PYTHONPATH=/home/mrayson/code/iwaves:/home/mrayson/code/soda
+
+PYTHONSCRIPT=$1
+
+srun -u --export=all $PYTHON -u $PYTHONSCRIPT $2 $3 $4 $5 $6 $7

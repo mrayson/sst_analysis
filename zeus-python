@@ -1,0 +1,24 @@
+#!/bin/bash --login
+#
+#SBATCH --account=pawsey0106
+#SBATCH --time=12:00:00
+#SBATCH --export=PYTHONPATH="/home/mrayson/code:$PYTHONPATH"
+#SBATCH --partition=workq
+##SBATCH --partition=debugq
+#SBATCH --output=LOGS/pythonjob-%j.out
+#SBATCH --nodes=1
+##SBATCH --mem=64000
+
+module use ~/code/modulefiles
+module load anaconda-python/3.6.0
+
+export OMP_NUM_THREADS=14
+export PYTHONUNBUFFERED=1
+export PYTHONPATH=/home/mrayson/code/iwaves:/home/mrayson/code/soda
+
+#PYTHON=/home/mrayson/anaconda2/bin/python
+PYTHON=python
+
+PYTHONSCRIPT=$1
+
+srun -u --export=all -n 1 -d 14 $PYTHON -u $PYTHONSCRIPT $2 $3 $4 $5 $6 $7

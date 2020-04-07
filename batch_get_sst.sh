@@ -1,0 +1,15 @@
+python3 -u download_sst.py -s 2017,2,18,0,0 -d 40 > sst_201702.out &
+python3 -u download_sst.py -s 2017,6,11,0,0 -d 45 > sst_201706.out &
+python3 -u download_sst.py -s 2017,9,4,0,0 -d 180 > sst_201709.out &
+python3 -u download_sst.py -s 2016,1,1,0,0 -d 31 > sst_201601.out &
+python3 -u download_sst.py -s 2016,2,1,0,0 -d 29 > sst_201602.out &
+python3 -u download_sst.py -s 2016,3,1,0,0 -d 31 > sst_201603.out &
+python3 -u download_sst.py -s 2016,4,1,0,0 -d 30 > sst_201604.out &
+python3 -u download_sst.py -s 2016,5,1,0,0 -d 31 > sst_201605.out &
+python3 -u download_sst.py -s 2016,6,1,0,0 -d 30 > sst_201606.out &
+python3 -u download_sst.py -s 2016,7,1,0,0 -d 31 > sst_201607.out &
+python3 -u download_sst.py -s 2016,8,1,0,0 -d 31 > sst_201608.out &
+python3 -u download_sst.py -s 2016,9,1,0,0 -d 30 > sst_201609.out &
+python3 -u download_sst.py -s 2016,10,1,0,0 -d 31 > sst_201610.out &
+python3 -u download_sst.py -s 2016,11,1,0,0 -d 30 > sst_201611.out &
+python3 -u download_sst.py -s 2016,12,1,0,0 -d 31 > sst_201612.out &
