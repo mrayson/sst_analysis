@@ -1,0 +1,33 @@
+#!/bin/bash --login
+#
+#SBATCH --account=pawsey0106
+#SBATCH --time=48:00:00
+#SBATCH --export=PYTHONPATH="/home/mrayson/code:$PYTHONPATH"
+#SBATCH --partition=copyq
+#SBATCH --ntasks=5
+#SBATCH --ntasks-per-node=5
+##SBATCH --partition=debugq
+#SBATCH --output=LOGS/copyjob-%j.out
+#SBATCH --nodes=1
+
+##############################
+# Download data using pstore:
+#
+#       https://support.pawsey.org.au/documentation/display/US/pshell+scripting+and+HPC
+##############################
+
+module load python
+
+#START=3
+#END=12
+STOREDIR=/projects
+PSHELL=~/pshell
+
+
+## Download the zarr file
+datafolder=$STOREDIR/NWS_Ocean_Mod/HIMAWARI
+$PSHELL "cd $datafolder && lcd $MYSCRATCH/HIMAWARI/ && get raw_zarr"
+
+## Download the raw netcdf files
+#datafolder=$STOREDIR/NWS_Ocean_Mod/HIMAWARI/raw
+#$PSHELL "cd $datafolder && lcd $MYSCRATCH/HIMAWARI/raw && get *.nc"

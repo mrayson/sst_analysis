@@ -114,8 +114,15 @@ def download_hw(times, rpath, dpath=None, box=None, remove_raw=False):
         #
         #VER='v100'; VERd='v1.0'
         #VER='v101'; VERd='v1.1'
-        VER = 'v102'; VERd = 'v1.2'
+
+        # 2016 - 2020 Files
+        #VER = 'v102'; VERd = 'v1.2'
+        #FVER = '01.0'
+
+        # 2020 - 2021 Files
+        VER = 'v200'; VERd = 'v2.0'
         FVER = '01.0'
+
         #
         #fdir='/pub/himawari/L2/SST/'+VER+'_nc4_normal_nrt/'+YYYYMM+'/'+DD+'/'
         #fdir = '/pub/himawari/L2/SST/'+VER+'_nc4_normal_std/'+YYYYMM+'/'+DD+'/'
@@ -220,7 +227,7 @@ if __name__ == "__main__":
     #dpath = 'cloudstor/Data/himawari_sst/'+box['name']+'/'
     #rpath = '/home/mrayson/group/mrayson/DATA/HIMAWARI/raw/'
     #dpath = '/home/mrayson/group/mrayson/DATA/HIMAWARI/'+box['name']+'/'
-    rpath = '/home/mrayson/scratch/HIMAWARI/raw/'
+    rpath = '/home/mrayson/scratch/HIMAWARI/raw_v2/'
     dpath = '/home/mrayson/scratch/HIMAWARI/'+box['name']+'/'
 
     if not os.path.isdir(rpath): os.mkdir(rpath)

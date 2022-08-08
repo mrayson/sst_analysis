@@ -43,13 +43,13 @@ $PYTHON -u SCRIPTS/download_sst.py -s $YEAR,1,1,0,0 -d 31 > sst_"$YEAR"01.out &
 $PYTHON -u SCRIPTS/download_sst.py -s $YEAR,2,1,0,0 -d 28 > sst_"$YEAR"02.out &
 $PYTHON -u SCRIPTS/download_sst.py -s $YEAR,3,1,0,0 -d 31 > sst_"$YEAR"03.out &
 $PYTHON -u SCRIPTS/download_sst.py -s $YEAR,4,1,0,0 -d 30 > sst_"$YEAR"04.out &
-#$PYTHON -u download_sst.py -s $YEAR,5,1,0,0 -d 31 > sst_"$YEAR"05.out &
-#$PYTHON -u download_sst.py -s $YEAR,6,1,0,0 -d 30 > sst_"$YEAR"06.out &
-#$PYTHON -u download_sst.py -s $YEAR,7,1,0,0 -d 31 > sst_"$YEAR"07.out &
-#$PYTHON -u download_sst.py -s $YEAR,8,1,0,0 -d 31 > sst_"$YEAR"08.out &
-#$PYTHON -u download_sst.py -s $YEAR,9,1,0,0 -d 30 > sst_"$YEAR"09.out &
-#$PYTHON -u download_sst.py -s $YEAR,10,1,0,0 -d 31 > sst_"$YEAR"10.out &
-#$PYTHON -u download_sst.py -s $YEAR,11,1,0,0 -d 30 > sst_"$YEAR"11.out &
-#$PYTHON -u download_sst.py -s $YEAR,12,1,0,0 -d 31 > sst_"$YEAR"12.out &
+$PYTHON -u SCRIPTS/download_sst.py -s $YEAR,5,1,0,0 -d 31 > sst_"$YEAR"05.out &
+$PYTHON -u SCRIPTS/download_sst.py -s $YEAR,6,1,0,0 -d 30 > sst_"$YEAR"06.out &
+$PYTHON -u SCRIPTS/download_sst.py -s $YEAR,7,1,0,0 -d 31 > sst_"$YEAR"07.out &
+$PYTHON -u SCRIPTS/download_sst.py -s $YEAR,8,1,0,0 -d 31 > sst_"$YEAR"08.out &
+$PYTHON -u SCRIPTS/download_sst.py -s $YEAR,9,1,0,0 -d 30 > sst_"$YEAR"09.out &
+$PYTHON -u SCRIPTS/download_sst.py -s $YEAR,10,1,0,0 -d 31 > sst_"$YEAR"10.out &
+$PYTHON -u SCRIPTS/download_sst.py -s $YEAR,11,1,0,0 -d 30 > sst_"$YEAR"11.out &
+$PYTHON -u SCRIPTS/download_sst.py -s $YEAR,12,1,0,0 -d 31 > sst_"$YEAR"12.out &
 
 wait
